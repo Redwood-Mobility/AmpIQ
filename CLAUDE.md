@@ -32,7 +32,7 @@ Everything lives in `index.html`:
 
 - **Colors**: Pink `#ED4E93`, Purple `#A855F7`, Blue `#3B82F6`, Navy `#070D1F`
 - **Gradient**: `linear-gradient(135deg, var(--pink), var(--purple), var(--blue))` — used for buttons, icons, text highlights, CTA background, process numbers, and card accent borders
-- **Typography**: Syne (display headings h1/h2, `--font-display`), Outfit (body/sub-headings, `--font-body`) via Google Fonts
+- **Typography**: Montserrat (display headings h1/h2, `--font-display`), Outfit (body/sub-headings, `--font-body`) via Google Fonts
 - **Icons**: Inline SVGs from Heroicons (outline style, stroke-width 2)
 
 ## Key Patterns
