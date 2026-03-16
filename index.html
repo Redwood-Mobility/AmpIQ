@@ -926,7 +926,7 @@
     <div class="footer-inner">
       <div class="footer-left">
         <img src="assets/ampiq-logo.png" alt="AmpIQ">
-        <p>&copy; 2026 AmpIQ LLC. All rights reserved.</p>
+        <p>&copy; <span id="copyYear"></span> AmpIQ LLC. All rights reserved.</p>
       </div>
       <div class="footer-links">
         <a href="mailto:zak@ampiq.tech">zak@ampiq.tech</a>
@@ -936,6 +936,9 @@
   </footer>
 
   <script>
+    // Copyright year
+    document.getElementById('copyYear').textContent = new Date().getFullYear();
+
     // Nav scroll effect
     const nav = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
