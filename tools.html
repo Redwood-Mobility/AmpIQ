@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>AmpIQ Tools</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #142B61;
+    --pink: #e84393;
+    --blue: #0984e3;
+    --bg: #f8f9fc;
+    --card-bg: #ffffff;
+    --text: #2d3748;
+    --text-muted: #718096;
+    --border: #e2e8f0;
+    --shadow: 0 1px 3px rgba(20,43,97,0.08), 0 4px 16px rgba(20,43,97,0.04);
+    --shadow-hover: 0 4px 12px rgba(20,43,97,0.12), 0 8px 32px rgba(20,43,97,0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.3);
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    width: 100%;
+    background: linear-gradient(135deg, var(--pink), var(--blue));
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+  }
+
+  .header img {
+    height: 36px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+  }
+
+  .header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+
+  .header p {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.85rem;
+    margin-top: 0.35rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 640px;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
+  }
+
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-bottom: 2rem;
+  }
+
+  a.card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  }
+
+  a.card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+    border-color: var(--pink);
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--pink), var(--blue));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+  }
+
+  .card-body { flex: 1; min-width: 0; }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  .card-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+    line-height: 1.4;
+  }
+
+  .card-arrow {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  a.card:hover .card-arrow { transform: translateX(3px); }
+
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="https://ampiq.tech/logo-trans.png" alt="AmpIQ">
+    <h1>Internal Tools</h1>
+    <p>Documents and utilities for AmpIQ operations</p>
+  </div>
+
+  <div class="container">
+
+    <div class="section-label">Client-Facing Documents</div>
+    <div class="card-group">
+      <a class="card" href="/feeschedule.html">
+        <div class="card-icon">💰</div>
+        <div class="card-body">
+          <div class="card-title">Fee Schedule</div>
+          <div class="card-desc">Consulting tiers, individual services, hardware margins, and management rev share</div>
+        </div>
+        <div class="card-arrow">›</div>
+      </a>
+      <a class="card" href="/one-pager.html">
+        <div class="card-icon">📄</div>
+        <div class="card-body">
+          <div class="card-title">One-Pager</div>
+          <div class="card-desc">Single-page company overview with process, differentiators, and verticals</div>
+        </div>
+        <div class="card-arrow">›</div>
+      </a>
+      <a class="card" href="/proposal-template.html">
+        <div class="card-icon">📋</div>
+        <div class="card-body">
+          <div class="card-title">Proposal Template</div>
+          <div class="card-desc">Fill-in-the-blanks proposal with highlighted placeholders</div>
+        </div>
+        <div class="card-arrow">›</div>
+      </a>
+    </div>
+
+    <div class="section-label">Interactive Tools</div>
+    <div class="card-group">
+      <a class="card" href="/proposal-generator.html">
+        <div class="card-icon">⚡</div>
+        <div class="card-body">
+          <div class="card-title">Proposal Generator</div>
+          <div class="card-desc">Form-driven tool that builds branded proposals with live preview</div>
+        </div>
+        <div class="card-arrow">›</div>
+      </a>
+      <a class="card" href="/calculator.html">
+        <div class="card-icon">🔢</div>
+        <div class="card-body">
+          <div class="card-title">Project Calculator</div>
+          <div class="card-desc">Model consulting fees, hardware margins, and management revenue per project</div>
+        </div>
+        <div class="card-arrow">›</div>
+      </a>
+    </div>
+
+    <div class="section-label">Quick Links</div>
+    <div class="card-group">
+      <a class="card" href="https://ampiq.tech">
+        <div class="card-icon">🌐</div>
+        <div class="card-body">
+          <div class="card-title">ampiq.tech</div>
+          <div class="card-desc">Public website</div>
+        </div>
+        <div class="card-arrow">›</div>
+      </a>
+      <a class="card" href="https://cal.com/zakwinnick/ampiq">
+        <div class="card-icon">📅</div>
+        <div class="card-body">
+          <div class="card-title">Discovery Call Booking</div>
+          <div class="card-desc">cal.com/zakwinnick/ampiq</div>
+        </div>
+        <div class="card-arrow">›</div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    AmpIQ LLC &middot; <a href="mailto:info@ampiq.tech">info@ampiq.tech</a> &middot; (650) 667-7279
+  </div>
+
+</body>
+</html>
